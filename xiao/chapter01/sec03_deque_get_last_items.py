@@ -10,7 +10,7 @@
 @contact: mailbaoqiang@gmail.com
 @site: http://www.github.com/githubao
 @software: PyCharm
-@file: sec03_get_last_items.py
+@file: sec03_deque_get_last_items.py
 @time: 2016/12/7 12:26
 """
 
