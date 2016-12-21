@@ -88,7 +88,8 @@ def download_file(url):
     fname = os.path.basename(url) + ".html"
     with open(root_path + fname, 'w', encoding='utf-8') as f:
         chunk = response.content
-        f.write(chunk.decode())
+        if chunk:
+            f.write(chunk.decode())
 
 
 def multi_download():

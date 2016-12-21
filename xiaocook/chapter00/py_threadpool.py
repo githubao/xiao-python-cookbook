@@ -29,14 +29,13 @@ def multi_down():
         pool.putRequest(req)
 
     print('putting request to pool')
-    pool.putRequest(threadpool.WorkRequest(download_file, args=['http://www.qq.com']))
-    pool.putRequest(threadpool.WorkRequest(download_file, args=['http://www.sohu.com']))
+    pool.putRequest(threadpool.WorkRequest(download_file, args=('http://www.so.com',)))
 
     pool.poll()
     pool.wait()
 
     print("destroy all threads before exist")
-    pool.dismissedWorkers(pool_size, do_join=True)
+    # pool.dismissedWorkers(pool_size, do_join=True)
 
 
 def main():
