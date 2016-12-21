@@ -26,7 +26,7 @@ def search(lines, pattern, history=5):
 
 
 def search_lines():
-    with open('../files/somefile.txt', 'r', encoding='utf-8') as f:
+    with open('../file/somefile.txt', 'r', encoding='utf-8') as f:
         for line, prevlines in search(f, 'python', 5):
             for pline in prevlines:
                 print(pline, end='')

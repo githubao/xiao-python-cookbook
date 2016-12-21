@@ -20,6 +20,10 @@ import threading
 
 import requests
 
+from xiaocook.util.settings import FILE_PATH
+
+root_path = FILE_PATH
+
 
 class Worker(threading.Thread):
     def __init__(self, workQueue, resultQueue, **kwargs):
@@ -32,7 +36,7 @@ class Worker(threading.Thread):
         while True:
             try:
                 callable, args, kwargs = self.workQueue.get(False)
-                res = callable(args, kwargs)
+                res = callable(*args, **kwargs)
                 self.resultQueue.put(res)
             except queue.Empty:
                 break
@@ -71,29 +75,33 @@ class WorkerManager:
         self.resultQueue.get(args, kwargs)
 
 
+urls = [
+    "http://wiki.python.org/moin/WebProgramming",
+    "http://www.baidu.com",
+    "http://wiki.python.org/moin/Documentation"
+]
+
+
 def download_file(url):
     print("begin download: " + url)
     response = requests.get(url)
     fname = os.path.basename(url) + ".html"
-    with open(fname, 'w', encoding='utf-8') as f:
-        while True:
-            chunk = response.content
-            f.write(chunk)
+    with open(root_path + fname, 'w', encoding='utf-8') as f:
+        chunk = response.content
+        f.write(chunk.decode())
 
 
 def multi_download():
-    urls = [
-        "http://wiki.python.org/moin/WebProgramming",
-        "http://wiki.createspace.com/3611970",
-        "http://wiki.python.org/moin/Documentation"
-    ]
-
     wm = WorkerManager(2)
     for i in urls:
         wm.add_job(download_file, i)
 
     wm.start()
     wm.wait_for_complete()
+
+
+def test():
+    param = (download_file, "1", {'key': 2})
 
 
 def main():
