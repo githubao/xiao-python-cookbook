@@ -37,6 +37,11 @@ def read_to_memory():
     with open(FILE_PATH + 'sample.bin', 'wb') as f:
         f.write(buf)
 
+    m1 = memoryview(buf)
+    m2 = m1[-5:]
+    m2[:] = b'wild2'
+    print(buf)
+
 
 def main():
     read_to_memory()
