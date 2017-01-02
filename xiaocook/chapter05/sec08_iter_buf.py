@@ -15,7 +15,8 @@
 """
 
 from functools import partial
-from xiaocook.util.settings import FILE_PATH
+
+from xiaocook.settings import FILE_PATH
 
 FILE_NAME = FILE_PATH + 'Documentation.html'
 

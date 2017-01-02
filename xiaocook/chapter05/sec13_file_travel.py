@@ -13,10 +13,11 @@
 @file: sec13_file_travel.py
 @time: 2017/1/2 13:33
 """
-import os
-from xiaocook.util.settings import FILE_PATH
 import glob
+import os
 from fnmatch import fnmatch
+
+from xiaocook.settings import FILE_PATH
 
 
 def travel():

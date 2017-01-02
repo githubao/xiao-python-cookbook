@@ -14,8 +14,9 @@
 @time: 2017/1/2 13:23
 """
 import os
-from xiaocook.util.settings import FILE_PATH
 import time
+
+from xiaocook.settings import FILE_PATH
 
 file_name = FILE_PATH + 'data.bin'
 

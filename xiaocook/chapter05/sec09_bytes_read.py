@@ -15,7 +15,8 @@
 """
 
 import os.path
-from xiaocook.util.settings import FILE_PATH
+
+from xiaocook.settings import FILE_PATH
 
 
 def read_to_buffer(filename):

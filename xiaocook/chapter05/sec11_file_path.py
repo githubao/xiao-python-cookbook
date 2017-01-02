@@ -17,7 +17,8 @@ sys: Python语言相关的模块
 """
 
 import os
-from xiaocook.util.settings import FILE_PATH
+
+from xiaocook.settings import FILE_PATH
 
 file_name = FILE_PATH + 'data.bin'
 

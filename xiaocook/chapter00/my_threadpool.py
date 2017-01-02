@@ -20,7 +20,7 @@ import threading
 
 import requests
 
-from xiaocook.util.settings import FILE_PATH
+from xiaocook.settings import FILE_PATH
 
 root_path = FILE_PATH
 

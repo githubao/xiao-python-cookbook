@@ -15,8 +15,10 @@
 """
 
 import os
+
 import mmap
-from xiaocook.util.settings import FILE_PATH
+
+from xiaocook.settings import FILE_PATH
 
 FILE_NAME = FILE_PATH + "data.bin"
 

@@ -14,12 +14,13 @@
 @time: 2016/12/25 20:50
 """
 
-import os
+import bz2
 import fnmatch
 import gzip
-import bz2
+import os
 import re
-from xiaocook.util.settings import FILE_PATH
+
+from xiaocook.settings import FILE_PATH
 
 
 def gen_find(filepat, top):

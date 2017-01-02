@@ -14,9 +14,10 @@
 @time: 2017/1/2 13:47
 """
 
-import sys
 import os
-from xiaocook.util.settings import FILE_PATH
+import sys
+
+from xiaocook.settings import FILE_PATH
 
 
 def file_code():

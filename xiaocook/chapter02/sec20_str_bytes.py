@@ -14,9 +14,10 @@
 @time: 2016/12/24 18:53
 """
 
-import re
-from xiaocook.util import settings
 import os
+import re
+
+from xiaocook import settings
 
 # FILE_NAME = settings.FILE_PATH + 'test\xf1test.txt'
 FILE_NAME = settings.FILE_PATH + 'testatest.txt'

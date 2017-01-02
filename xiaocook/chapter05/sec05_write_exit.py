@@ -14,8 +14,9 @@
 @time: 2016/12/25 22:22
 """
 
-from xiaocook.util.settings import FILE_PATH
 import os
+
+from xiaocook.settings import FILE_PATH
 
 
 def write_exits():

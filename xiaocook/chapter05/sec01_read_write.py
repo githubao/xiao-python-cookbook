@@ -14,9 +14,10 @@
 @time: 2016/12/25 21:33
 """
 
-from xiaocook.util.settings import FILE_PATH
 import sys
 import traceback
+
+from xiaocook.settings import FILE_PATH
 
 
 def io():

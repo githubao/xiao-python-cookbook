@@ -15,7 +15,8 @@
 """
 
 import heapq
-from xiaocook.util.settings import FILE_PATH
+
+from xiaocook.settings import FILE_PATH
 
 
 def iter_merge():

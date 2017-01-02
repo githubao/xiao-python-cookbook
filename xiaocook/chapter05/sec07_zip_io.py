@@ -14,10 +14,10 @@
 @time: 2016/12/26 20:57
 """
 
-import gzip
 import bz2
+import gzip
 
-from xiaocook.util.settings import FILE_PATH
+from xiaocook.settings import FILE_PATH
 
 
 def zip_io():

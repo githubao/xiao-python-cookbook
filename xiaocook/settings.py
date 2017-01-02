@@ -16,5 +16,5 @@
 
 from os.path import dirname, abspath
 
-ROOT_PATH = dirname(dirname(abspath(__file__))) + '/'
+ROOT_PATH = dirname(abspath(__file__)) + '/'
 FILE_PATH = ROOT_PATH + 'file/'

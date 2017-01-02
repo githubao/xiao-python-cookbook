@@ -14,7 +14,7 @@
 @time: 2016/12/24 15:29
 """
 
-from xiaocook.util.settings import FILE_PATH
+from xiaocook.settings import FILE_PATH
 
 FILE_NAME = FILE_PATH + 'io.txt'
 

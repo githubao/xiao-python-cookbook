@@ -14,7 +14,7 @@
 @time: 2016/12/25 22:11
 """
 
-from xiaocook.util.settings import FILE_PATH
+from xiaocook.settings import FILE_PATH
 
 
 def bytes_op():

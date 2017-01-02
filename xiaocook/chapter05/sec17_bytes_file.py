@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 """
-@description: 把输出打印到文件
+@description: 把字节流写到文本文件
 
 @version: 1.0
 @author: BaoQiang
@@ -10,20 +10,19 @@
 @contact: mailbaoqiang@gmail.com
 @site: http://www.github.com/githubao
 @software: PyCharm
-@file: sec02_print_file.py
-@time: 2016/12/25 21:46
+@file: sec17_bytes_file.py
+@time: 2017/1/2 15:23
 """
 
-from xiaocook.settings import FILE_PATH
+import sys
 
 
-def print_to_file():
-    with open(FILE_PATH + 'io.txt', 'a') as f:
-        print('append', file=f)
-
+def write():
+    # sys.stdout.write(b'Hello\n')
+    sys.stdout.buffer.write(b'Hello\n')
 
 def main():
-    print_to_file()
+    write()
 
 
 if __name__ == '__main__':
