@@ -10,7 +10,7 @@
 @contact: mailbaoqiang@gmail.com
 @site: http://www.github.com/githubao
 @software: PyCharm
-@file: sec08_lambda_partial.py
+@file: sec07_lambda_func.py
 @time: 2017/1/7 20:01
 """
 
