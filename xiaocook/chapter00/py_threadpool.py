@@ -14,10 +14,12 @@
 @time: 2016/12/21 12:27
 """
 
-import urllib3
 import os
 import time
+
 import threadpool
+import urllib3
+
 from xiaocook.chapter00.my_threadpool import download_file, urls
 
 
