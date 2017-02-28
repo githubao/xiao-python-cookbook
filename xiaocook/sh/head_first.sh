@@ -1,12 +1,31 @@
 #!/usr/bin/env bash
 
+#12 特殊变量
+echo $0
+echo "cmd cnt: $#"
+echo "cmd str: $*"
+echo "cmd list: $@"
+for item in $@; do
+echo $item
+done
+echo "cmd id: $$"
+echo "cmd retcode: $?"
+
+if false; then
+#11 字符串测试
+if [ -z $1 ];then
+echo 'empty str'
+else
+echo 'not empty'
+fi
+
+#s10 函数
 function sub(){
     res=$[$1-$2];
     echo $res
 }
 sub $1 $2
 
-if false; then
 #s9 死循环 用于监控程序
 while true;do
 echo 'loop'
