@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 """
-@description:
+@description: 读取环境变量 sys.path
 
 @version: 1.0
 @author: BaoQiang
@@ -10,27 +10,14 @@
 @contact: mailbaoqiang@gmail.com
 @site: http://www.github.com/githubao
 @software: PyCharm
-@file: sec01_init.py
-@time: 2017/3/2 20:10
+@file: sec09_sys_path.py
+@time: 2017/3/2 21:32
 """
-
-__all__ = ['spam', 'grok']
-
-
-def spam():
-    # print('spam')
-    print('new spam')
-
-
-def grok():
-    print('grok')
-
-
-blah = 42
 
 
 def main():
-    print("using __init__.py for a package waiting for importing")
+    print("设置PYTHONPATH环境变量 或者 "
+          "在site-package下面新建 myapp.pth的文件，里面内容是自己要导入的模块的路径名")
 
 
 if __name__ == '__main__':

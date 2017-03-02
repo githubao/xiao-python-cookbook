@@ -10,27 +10,13 @@
 @contact: mailbaoqiang@gmail.com
 @site: http://www.github.com/githubao
 @software: PyCharm
-@file: sec01_init.py
-@time: 2017/3/2 20:10
+@file: sec07_run_app.py
+@time: 2017/3/2 21:14
 """
-
-__all__ = ['spam', 'grok']
-
-
-def spam():
-    # print('spam')
-    print('new spam')
-
-
-def grok():
-    print('grok')
-
-
-blah = 42
 
 
 def main():
-    print("using __init__.py for a package waiting for importing")
+    print("在根目录新建__main__.py文件，那么直接命令行运行文件夹或者zip文件，都可以调用到__main__.py文件")
 
 
 if __name__ == '__main__':
