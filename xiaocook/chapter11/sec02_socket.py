@@ -15,7 +15,7 @@
 """
 
 from socketserver import BaseRequestHandler, TCPServer, StreamRequestHandler, ThreadingTCPServer
-from socket import socket, AF_INET, SOCK_STREAM, SOL_SOCKET, SO_REUSEADDR
+import socket
 from threading import Thread
 
 pool_size = 16
@@ -66,23 +66,23 @@ def server_pool():
 
 def server2():
     srv = TCPServer(('', 20000), EchoHandler, bind_and_activate=False)
-    srv.socket.setsockopt(SOL_SOCKET, SO_REUSEADDR, True)
+    srv.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, True)
     srv.server_bind()
     srv.server_activate()
     srv.serve_forever()
 
 
 def client():
-    client = socket(AF_INET, SOCK_STREAM)
+    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     client.connect(('localhost', 20000))
-    client.send(b'hello')
+    client.send(b'hello\n')
     print(client.recv(8192))
 
 
 def main():
     # server_pool()
-    server()
-    # client()
+    # server()
+    client()
 
 
 if __name__ == '__main__':
