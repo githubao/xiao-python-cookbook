@@ -16,7 +16,6 @@
 
 import cgi
 import time
-from resty import PathDispatcher
 from wsgiref.simple_server import make_server
 
 
@@ -50,13 +49,13 @@ def hello_world(environ, start_response):
 
 
 def localtime(environ, start_response):
-    start_response('200 OK', ['Content-type', 'application/xml'])
+    start_response('200 OK', [('Content-type', 'application/xml')])
     resp = _localtime_resp.format(t=time.localtime())
     yield resp.encode()
 
 
-_localtime_resp = '''
-<? xml version="1.0"?>
+_localtime_resp = '''\
+<?xml version="1.0"?>
 <time>
 <year>{t.tm_year}</year>
 <month>{t.tm_mon}</month>
@@ -80,7 +79,12 @@ _hello_resp = '''
 
 
 def start_run():
-    dis
+    dispatcher = PathDispatcher()
+    dispatcher.register('GET', '/hello', hello_world)
+    dispatcher.register('GET', '/localtime', localtime)
+
+    httpd = make_server('', 8080, dispatcher)
+    httpd.serve_forever()
 
 
 def main():
