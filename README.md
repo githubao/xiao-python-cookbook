@@ -11,3 +11,8 @@ writing python cookbook source code
 - chapter08: classes and objects
 - chapter09: meta programming
 - chapter10: modules and packages
+- chapter11: network and web programming
+- chapter12: concurrency
+- chapter13: utility, scripting and system administration
+- chapter14: testing, debugging and exceptions
+- chapter15: [UNDO] c extensions
