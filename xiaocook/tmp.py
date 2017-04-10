@@ -14,7 +14,12 @@
 @time: 2016/12/24 19:12
 """
 
+
 def tmp():
+    print([1, 2, 3][:-1])
+
+
+def tmp1():
     print(ord('a'))
 
 
@@ -24,4 +29,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
